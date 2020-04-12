@@ -57,7 +57,7 @@ rm -r gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf.tar.xz
 
 
 echo -e ${Yellow}"Download python script..."${Reset}
-cd ${COMPILER_PATH}
+cd ${DIRECTORY}
 wget https://raw.githubusercontent.com/riscv/riscv-poky/master/scripts/sysroot-relativelinks.py
 sudo chmod +x sysroot-relativelinks.py
 
