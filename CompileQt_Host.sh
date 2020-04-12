@@ -84,7 +84,7 @@ ${DIRECTORY}/sysroot-relativelinks.py sysroot
 
 echo -e ${Yellow}"Configure Qt..."${Reset}
 cd ${DIRECTORY}/build
-../qt-everywhere-src-5.11.3/configure -opengl es2 -device ${DEVICE} -device-option CROSS_COMPILE=${COMPILER_PATH}/tools/arm-bcm2708/gcc-arm-8.3-2019-x86_64-arm-linux-gnueabihf/bin/arm-linux-gnueabihf- -sysroot ${COMPILER_PATH}/sysroot -prefix /usr/local/RaspberryQt -opensource -confirm-license -no-gbm -skip qtscript -nomake tests -nomake examples -make libs -pkg-config -no-use-gold-linker -v | tee ${DIRECTORY}/log/config.log
+../qt-everywhere-src-5.11.3/configure -opengl es2 -device ${DEVICE} -device-option CROSS_COMPILE=${COMPILER_PATH}/tools/arm-bcm2708/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/arm-linux-gnueabihf- -sysroot ${COMPILER_PATH}/sysroot -prefix /usr/local/RaspberryQt -opensource -confirm-license -no-gbm -skip qtscript -nomake tests -nomake examples -make libs -pkg-config -no-use-gold-linker -v | tee ${DIRECTORY}/log/config.log
 
 echo -e ${Yellow}"Build Qt..."${Reset}
 make -j${CORES} | tee ${DIRECTORY}/log/make.log
